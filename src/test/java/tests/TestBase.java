@@ -28,7 +28,7 @@ public class TestBase {
         ));
         Configuration.browserCapabilities = capabilities;
 
-        String browser = System.getProperty("BROWSER");
+        String browser = System.getenv("BROWSER");
         Configuration.browser = browser != null ? browser : "mozilla";
 
     }
