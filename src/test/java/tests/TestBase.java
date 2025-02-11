@@ -16,7 +16,6 @@ public class TestBase {
     @BeforeAll
     static void beforeAll(){
         Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browserSize = "1928x1080";
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
         Configuration.pageLoadStrategy = "eager";
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
@@ -32,6 +31,8 @@ public class TestBase {
         Configuration.browser = browser != null ? browser : "mozilla";
         String browserversion = System.getenv("BROWSER_VERSION");
         Configuration.browserVersion = browserversion != null ? browserversion : "124.0";
+        String browsersize = System.getenv("BROWSER_SIZE");
+        Configuration.browserSize = browsersize != null ? browsersize : "1928x1080";
 
 
     }
