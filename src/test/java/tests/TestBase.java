@@ -30,6 +30,9 @@ public class TestBase {
 
         String browser = System.getenv("BROWSER");
         Configuration.browser = browser != null ? browser : "mozilla";
+        String browserversion = System.getenv("BROWSER_VERSION");
+        Configuration.browserVersion = browserversion != null ? browserversion : "124.0";
+
 
     }
 
