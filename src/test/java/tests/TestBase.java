@@ -34,8 +34,8 @@ public class TestBase {
         Configuration.browserSize = browsersize != null ? browsersize : "1928x1080";
 
         String remote = System.getenv("REMOTE_DRIVER_URL");
-        String baseUrl = "https://user1:1234@" + (remote != null && !remote.isEmpty() ? remote : "selenoid.autotests") + "/wd/hub";
-        Configuration.baseUrl = baseUrl;
+        Configuration.remote = "https://user1:1234@" + (remote != null && !remote.isEmpty() ? remote : "selenoid.autotests") + "/wd/hub";
+
 
     }
 
