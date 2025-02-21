@@ -26,14 +26,14 @@ public class TestBase {
         ));
         Configuration.browserCapabilities = capabilities;
 
-        String browser = System.getenv("BROWSER");
+        String browser = System.getProperty("browser");
         Configuration.browser = browser != null ? browser : "mozilla";
-        String browserversion = System.getenv("BROWSER_VERSION");
+        String browserversion = System.getProperty("version");
         Configuration.browserVersion = browserversion != null ? browserversion : "124.0";
-        String browsersize = System.getenv("BROWSER_SIZE");
+        String browsersize = System.getProperty("size");
         Configuration.browserSize = browsersize != null ? browsersize : "1928x1080";
 
-        String remote = System.getenv("REMOTE_DRIVER_URL");
+        String remote = System.getProperty("driver");
         Configuration.remote = "https://user1:1234@" + (remote != null && !remote.isEmpty() ? remote : "selenoid.autotests") + "/wd/hub";
 
 
