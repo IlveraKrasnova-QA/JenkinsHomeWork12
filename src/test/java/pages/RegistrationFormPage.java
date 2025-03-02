@@ -118,6 +118,7 @@ public class RegistrationFormPage {
     }
 
     public RegistrationFormPage submitForm() {
+        submitInput.scrollTo();
         submitInput.click();
 
         return this;
