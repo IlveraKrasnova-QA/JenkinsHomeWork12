@@ -104,6 +104,7 @@ public class RegistrationFormPage {
     }
 
     public RegistrationFormPage setState(String value) {
+        stateInput.scrollTo();
         stateInput.click();
         stateInput.$(byText(value)).click();
 
@@ -111,6 +112,7 @@ public class RegistrationFormPage {
     }
 
     public RegistrationFormPage setCity(String value) {
+        cityInput.scrollTo();
         cityInput.click();
         cityInput.$(byText(value)).click();
 
